@@ -3,7 +3,7 @@ import React, { useState, Suspense} from 'react'
 import Loading from './components/loading/Loading';
 import { BrowserRouter as Router,  } from 'react-router-dom';
 import { AnimatePresence} from 'framer-motion'
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 const Main = React.lazy(() => import('./components/Main'));
 
 function App() {

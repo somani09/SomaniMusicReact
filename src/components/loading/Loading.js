@@ -28,7 +28,7 @@ function Loading({loaded}) {
         
         <motion.div
             id="loadingScreen" 
-            className="vh100 vw100 center-col loading"
+            className="vh100 vw100 center loading"
             variants={loadingFadeOutVariants}
             initial="hidden"
             animate="visible"
@@ -36,7 +36,7 @@ function Loading({loaded}) {
             >
             <div>
                 <img src={logo} width="100rem" alt="logo"></img>
-                <div className="loadingText">Loading</div>
+                <div className="loadingText text-center">Loading</div>
             </div>
         </motion.div>
     )

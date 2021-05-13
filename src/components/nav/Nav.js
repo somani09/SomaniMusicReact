@@ -4,14 +4,16 @@ import './nav.scss'
 import {navDropDownVariants } from '../../data/variants'
 import { motion } from 'framer-motion'
 
-function Nav({activePage, setActivePage, initialLoad, setInitialLoad, delay, setDelay}) {
+function Nav({activePage, setActivePage, initialLoad, setInitialLoad, setDelay}) {
 
     const location = useLocation();
   
     useEffect(() => {
-        if(location.pathname === '/songs')
+        if(location.pathname === '/SomaniMusicReact/')
+            setActivePage('home');
+        if(location.pathname === '/SomaniMusicReact/songs')
             setActivePage('songs');
-        else if(location.pathname === '/about')
+        else if(location.pathname === '/SomaniMusicReact/about')
             setActivePage('about')
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -24,7 +26,7 @@ function Nav({activePage, setActivePage, initialLoad, setInitialLoad, delay, set
             initial="hidden"
             animate="visible"
             >
-            <Link to="/" 
+            <Link to="/SomaniMusicReact/" 
                 className={activePage === "home" ? "active nav-button w25" : "nav-button w25"} 
                 onClick = {()=>{
                     setActivePage("home"); 
@@ -33,7 +35,7 @@ function Nav({activePage, setActivePage, initialLoad, setInitialLoad, delay, set
                         setDelay(0)
                     }; 
                     } }>HOME</Link>
-            <Link to="/songs" 
+            <Link to="/SomaniMusicReact/songs" 
                 className={activePage === "songs" ? "active nav-button w25" : "nav-button w25"} 
                 onClick = {()=>{
                     setActivePage("songs"); 
@@ -42,7 +44,7 @@ function Nav({activePage, setActivePage, initialLoad, setInitialLoad, delay, set
                         setDelay(0)
                     }; 
                     }} >SONGS</Link>
-            <Link to="/about" 
+            <Link to="/SomaniMusicReact/about" 
                 className={activePage === "about" ? "active nav-button w35" : "nav-button w35"} 
                 onClick = {()=>{
                     setActivePage("about"); 

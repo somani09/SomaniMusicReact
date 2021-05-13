@@ -27,11 +27,11 @@ function Main({loaded, setLoaded, initialLoad, setInitialLoad, delay, setDelay})
     const [addedDelay, setAddedDelay] = useState(delay)
   
     useEffect(() => {
-        if (location.pathname === '/')
+        if (location.pathname === '/SomaniMusicReact/')
             setAddedDelay(prevDelay => prevDelay + 3.5)
-        else if(location.pathname === '/songs')
+        else if(location.pathname === '/SomaniMusicReact/songs')
             setAddedDelay(prevDelay => prevDelay + 2.5)
-        else if(location.pathname === '/about')
+        else if(location.pathname === '/SomaniMusicReact/about')
             setAddedDelay(prevDelay => prevDelay + .1)
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -71,15 +71,15 @@ function Main({loaded, setLoaded, initialLoad, setInitialLoad, delay, setDelay})
                         <Switch location={location} key={location.key}>
                             <Route 
                                 exact 
-                                path="/" 
+                                path="/SomaniMusicReact/" 
                                 component={ (props) => <Home activePage={activePage} setActivePage={setActivePage}  delay={delay} /> } />
                             <Route 
                                 exact 
-                                path="/songs" 
+                                path="/SomaniMusicReact/songs" 
                                 component={ (props) => <Songs activePage={activePage} setActivePage={setActivePage} delay={delay} /> } />
                             <Route 
                                 exact 
-                                path="/about" 
+                                path="/SomaniMusicReact/about" 
                                 component={ (props) => <About activePage={activePage} setActivePage={setActivePage} delay={delay} /> } />
                         </Switch>
                     </AnimatePresence>

@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState, useCallback } from 'react'
 import './backgroundMain.scss'
-import { Fade } from 'react-slideshow-image';
-import 'react-slideshow-image/dist/styles.css'
 import { desktopImages, mobileImages } from '../../data/backgroundImages'
+import { motion, AnimatePresence } from "framer-motion";
+import { wrap } from '@popmotion/popcorn';
+import { backgroundvariants } from '../../data/variants'
 
 function BackgroundMain({windowWidth, loaded ,setLoaded}) {
-
     let images = [];
 
     if(windowWidth<768)
@@ -13,7 +13,13 @@ function BackgroundMain({windowWidth, loaded ,setLoaded}) {
     else
         images = desktopImages
 
+    const [[page, direction], setPage] = useState([0,0])
+    const imageIndex = wrap(0, desktopImages.length, page)
 
+    const paginate = useCallback((newDirection)=>{
+            setPage([page + newDirection, newDirection]);
+    },[page])
+     
 
     useEffect(() => {
         const loadImage = image => {
@@ -32,16 +38,33 @@ function BackgroundMain({windowWidth, loaded ,setLoaded}) {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
+    useEffect(() => {
+        let interval = null;
+
+        interval = setInterval(() => {
+            paginate(1);
+            
+        }, 5000);
+        return () => {
+            clearInterval(interval)
+
+        }
+    }, [paginate])
 
     return (
         <div className="lower">
-        <Fade duration={3000} arrows={false}>
-            {images.map((x,i) => (
-                <div key={i} className="each-fade backgroundMain">
-                    <img className="backImage"  src={x} alt="backgroundImage" />
-                </div>
-            ))}
-        </Fade>
+            <AnimatePresence initial={false} custom={direction} >
+                <motion.img
+                    className="backImage"
+                    key={page}
+                    src={images[imageIndex]}
+                    custom={direction}
+                    variants={backgroundvariants}
+                    initial="initial"
+                    animate="animate"
+                    exit="exit"
+                />
+                </AnimatePresence>
         </div>
     )
 }
