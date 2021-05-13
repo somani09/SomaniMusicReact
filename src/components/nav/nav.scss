@@ -1,0 +1,39 @@
+.button-group{
+    margin-top: 5px;
+    width:80%
+  }
+
+
+
+  .nav-button{
+    cursor: pointer;
+    padding: 2px;
+    border: none;
+    outline: none; 
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-size:10px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    /* letter-spacing: -2px; */
+    font-weight: bold;
+    transition: 0.5s all;
+    background-color: rgba(214, 214, 208, .5);
+    &.active{
+      background-color: rgba(214, 214, 208, .3);
+      color: white;
+      pointer-events: none;
+    }
+  }
+  
+  .nav-button:hover{
+    color:white;
+    background-color: rgba(71, 71, 71,.5);
+  }
+
+// @media screen and (min-width:426px)
+// {
+//   .button-group{
+//       height: 5%;
+//     }
+// }
