@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/SomaniMusicReact/static/css/main.54b00fe5.chunk.css",
+    "main.css": "/SomaniMusicReact/static/css/main.e53ddb63.chunk.css",
     "main.js": "/SomaniMusicReact/static/js/main.0cc5e10f.chunk.js",
     "main.js.map": "/SomaniMusicReact/static/js/main.0cc5e10f.chunk.js.map",
     "runtime-main.js": "/SomaniMusicReact/static/js/runtime-main.b279007a.js",
@@ -34,7 +34,7 @@
     "static/css/4.70cd01fa.chunk.css.map": "/SomaniMusicReact/static/css/4.70cd01fa.chunk.css.map",
     "static/css/5.3f9466bb.chunk.css.map": "/SomaniMusicReact/static/css/5.3f9466bb.chunk.css.map",
     "static/css/6.bba85ac8.chunk.css.map": "/SomaniMusicReact/static/css/6.bba85ac8.chunk.css.map",
-    "static/css/main.54b00fe5.chunk.css.map": "/SomaniMusicReact/static/css/main.54b00fe5.chunk.css.map",
+    "static/css/main.e53ddb63.chunk.css.map": "/SomaniMusicReact/static/css/main.e53ddb63.chunk.css.map",
     "static/js/2.8aadcd48.chunk.js.LICENSE.txt": "/SomaniMusicReact/static/js/2.8aadcd48.chunk.js.LICENSE.txt",
     "static/media/blue1.309e8943.jpg": "/SomaniMusicReact/static/media/blue1.309e8943.jpg",
     "static/media/blue1.833cb961.jpg": "/SomaniMusicReact/static/media/blue1.833cb961.jpg",
@@ -58,7 +58,7 @@
     "static/js/runtime-main.b279007a.js",
     "static/css/2.800be05e.chunk.css",
     "static/js/2.8aadcd48.chunk.js",
-    "static/css/main.54b00fe5.chunk.css",
+    "static/css/main.e53ddb63.chunk.css",
     "static/js/main.0cc5e10f.chunk.js"
   ]
 }
